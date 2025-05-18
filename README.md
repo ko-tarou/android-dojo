@@ -1,22 +1,14 @@
-# CA Tech Dojo Android 2025 📱
-https://www.cyberagent.co.jp/careers/students/event/detail/id=30934
-
-
-# 課題概要
+# 概要
 
 「Google Gemini」のようなAIチャットアプリの開発に取り組みましょう。
 
 https://play.google.com/store/apps/details?id=com.google.android.apps.bard&hl=ja
-
-<img src="https://github.com/user-attachments/assets/cdedd678-b7a7-4efc-b17a-e91a32b71078" width="256">
 
 ## 機能要件
 
 各画面の機能要件は、下記の通りです。
 
 ### メッセージ入力画面
-
-<img src="https://github.com/user-attachments/assets/01bbf1ae-5656-4fdf-bc98-8f48bc2cb28c" width="256"> <img src="https://github.com/user-attachments/assets/aaf290bf-9169-410e-a531-55cd2a6b6d5a" width="256"> <img src="https://github.com/user-attachments/assets/3f7dc994-81b5-4f4f-9dca-f1acac115a31" width="256"> <img src="https://github.com/user-attachments/assets/53d87f4d-ab93-4345-96f1-3f823e2fbb22" width="256">
 
 必須要件
 - メッセージを入力して、サーバーに送信ができる
@@ -35,14 +27,12 @@ https://play.google.com/store/apps/details?id=com.google.android.apps.bard&hl=ja
 
 ### メッセージ一覧画面 (任意)
 
-<img src="https://github.com/user-attachments/assets/31888ac5-4de0-4be1-a228-d264dc6ffaf8" width="256">
 
 任意要件
 - 過去の会話一覧が表示できる
 - 過去の会話履歴が表示できる
 
 ### 設定画面
-<img src="https://github.com/user-attachments/assets/0514c19a-df70-4707-aef3-3a840850bf6c" width="256"> <img src="https://github.com/user-attachments/assets/06779e55-fb85-407b-83b5-4fe6fb8ee0a4" width="256"> <img src="https://github.com/user-attachments/assets/22bd4e05-3cdc-4d57-aff6-bd51b437fe0a" width="256">
 
 必須要件
 - Gemini API Key の保存
@@ -149,21 +139,3 @@ $ curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash
 
 ```
 
-# 【重要】課題の提出方法について
-
-課題を進める前に、https://github.com/CyberAgentHack のオーガナイゼーションに課題提出用のリポジトリを作成してください。
-
-このリポジトリをforkするか、新たに自分のリポジトリを作成することも可能です。開発中はこまめにcommit、pushすることを推奨します。
-
-※閲覧権限が無い場合は、社員から付与してもらってください。
-
-リポジトリ名は、`25dojo_android_{姓}_{名}` で作成してください。
-
-パッケージ名は、`com.github.{GitHubId}.apps.gemini` に設定してください。
-
-例:
-
-```
-リポジトリ名: 25dojo_android_furusawa_mizuki
-パッケージ名: com.github.mzkii.apps.gemini
-```
