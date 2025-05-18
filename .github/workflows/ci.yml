@@ -1,0 +1,36 @@
+name: Android CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: 🏗️ JDKをセットアップ（Android用）
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: 📦 Gradleのキャッシュ
+        uses: gradle/gradle-build-action@v2
+
+      - name: 🔧 Gradle Wrapperの権限を設定
+        run: chmod +x gradlew
+
+      - name: 🏗️ プロジェクトをビルド
+        run: ./gradlew assembleDebug
+
+      - name: 🧪 Unit Testを実行
+        run: ./gradlew testDebugUnitTest

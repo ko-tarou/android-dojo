@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <!--通信のアクセス権限-->
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <!--音声を取得する権限-->
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+  <!-- Android 12 以下 (API 32 まで) のストレージアクセス権限 -->
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"/>
+
+  <!-- Android 13 以上 (API 33～) のストレージアクセス権限 -->
+  <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" tools:targetApi="33"/>
+
+  <queries>
+    <package android:name="com.google.android.googlequicksearchbox"/>
+  </queries>
+
+
+  <application
+      android:name="com.github.kota.apps.gemini.MyApplication"
+      android:allowBackup="true"
+      android:dataExtractionRules="@xml/data_extraction_rules"
+      android:fullBackupContent="@xml/backup_rules"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/Theme.Dojo2025"
+      tools:targetApi="31">
+    <activity
+        android:name="com.github.kota.apps.gemini.MainActivity"
+        android:exported="true"
+        android:label="@string/app_name"
+        android:windowSoftInputMode="adjustResize"
+        android:theme="@style/Theme.Dojo2025">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>
